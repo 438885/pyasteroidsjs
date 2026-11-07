@@ -1146,6 +1146,6 @@ await _boot()\`);
   });
 
   const runner = Comlink.wrap(Comlink.windowEndpoint(iframe.contentWindow));
-  const pyCode = await fetch("https://raw.githubusercontent.com/438885/pyasteroidsjs/refs/heads/main/pyasteroidsjs.py").then((r) => r.text());
+  const pyCode = await fetch("./pyasteroidsjs.py").then((r) => r.text());
   await runner.run(pyCode, hostStorage);
 })();
